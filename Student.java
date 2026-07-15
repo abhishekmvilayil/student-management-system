@@ -11,6 +11,10 @@ public class Student {
         this.age=age;
         this.course=course;
     }
+
+    public int getId(){
+        return id;
+    }
     
     @Override
     public String toString(){

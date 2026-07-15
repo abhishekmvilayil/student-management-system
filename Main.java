@@ -7,7 +7,9 @@ public class Main {
         while (true) { 
                 System.out.println("1. Add Student");
                 System.out.println("2. View Students");
-                System.out.println("3. Exit");
+                System.out.println("3. Search Student");
+                System.out.println("4. Delete Student");
+                System.out.println("5. Exit");
                 System.out.println("Enter your choice:");
                 int n=sc.nextInt();
                 switch(n) {
@@ -30,6 +32,17 @@ public class Main {
                         service.ViewStudentList();
                         break;
                     case 3:
+                        System.out.println("Enter the id :");
+                        int k=sc.nextInt();
+                        sc.nextLine();
+                        service.Search(k);
+                        break;
+                    case 4:System.out.println("Enter the id to delete:");
+                            int p=sc.nextInt();
+                            sc.nextLine();
+                            service.delete(p);
+                            break;
+                    case 5:
                         System.out.println("Thank you");
                         System.exit(0);
                     default: System.out.println("Invalid choice");
