@@ -9,7 +9,8 @@ public class Main {
                 System.out.println("2. View Students");
                 System.out.println("3. Search Student");
                 System.out.println("4. Delete Student");
-                System.out.println("5. Exit");
+                System.out.println("5. Updation");
+                System.out.println("6. Exit");
                 System.out.println("Enter your choice:");
                 int n=sc.nextInt();
                 switch(n) {
@@ -42,7 +43,12 @@ public class Main {
                             sc.nextLine();
                             service.delete(p);
                             break;
-                    case 5:
+                    case 5:System.out.println("Enter the id of student to update:");
+                           int t=sc.nextInt();
+                           sc.nextLine();
+                           service.update(t);
+                           break;
+                    case 6:
                         System.out.println("Thank you");
                         System.exit(0);
                     default: System.out.println("Invalid choice");

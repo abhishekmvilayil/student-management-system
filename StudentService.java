@@ -1,8 +1,9 @@
 
 import java.util.ArrayList;
-
+import java.util.Scanner;
 public class StudentService {
     ArrayList<Student>student=new ArrayList<>();
+    Scanner sc=new Scanner(System.in);
     
     //add functionality
     void Studentadd(Student s){
@@ -43,6 +44,28 @@ public class StudentService {
             }
             System.out.println("Student not found");
         }
+
+
+    //update function
+    void update(int id){
+        for(int i=0;i<student.size();i++){
+            if(student.get(i).getId()==id){
+                System.out.println("Enter updated name:");
+                String name=sc.nextLine();
+                student.get(i).setName(name);
+                System.out.println("Enter updated age:");
+                int age=sc.nextInt();
+                sc.nextLine();
+                student.get(i).setAge(age);
+                System.out.println("Enter the update course:");
+                String course=sc.nextLine();
+                student.get(i).setCourse(course);
+                System.out.println("Updated");
+                return;
+            }
+        }
+        System.out.println("Id not found");
+    }
     }
 
 
