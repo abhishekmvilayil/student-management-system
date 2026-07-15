@@ -1,8 +1,41 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Student s1=new Student(1,"RAM", 20,"CSE");
         StudentService service=new StudentService();
-        service.Studentadd(s1);
-        service.ViewStudentList();
+        
+        Scanner sc=new Scanner(System.in);
+        while (true) { 
+                System.out.println("1. Add Student");
+                System.out.println("2. View Students");
+                System.out.println("3. Exit");
+                System.out.println("Enter your choice:");
+                int n=sc.nextInt();
+                switch(n) {
+                    case 1:
+                        System.out.println("Enter id:");
+                        int id=sc.nextInt();
+                        sc.nextLine();
+                        System.out.println("Enter name:");
+                        String name=sc.nextLine();
+                        System.out.println("Enter Age:");
+                        int age=sc.nextInt();
+                        sc.nextLine();
+                        System.out.println("Enter course name:");
+                        String course=sc.nextLine();
+
+                        service.Studentadd(new Student(id, name, age, course));
+                        
+                        break;
+                    case 2:
+                        service.ViewStudentList();
+                        break;
+                    case 3:
+                        System.out.println("Thank you");
+                        System.exit(0);
+                    default: System.out.println("Invalid choice");
+                       
+                }
+         }
+        }
     }
-}
+
