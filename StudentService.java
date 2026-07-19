@@ -76,6 +76,9 @@ public class StudentService {
     
     //view functionality
     void ViewStudentList(){
+        student.sort((s1,s2)->
+        Integer.compare(s1.getId(), s2.getId()));
+        
         for(Student k:student){
             System.out.println(k);
         }
