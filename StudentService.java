@@ -54,10 +54,22 @@ public class StudentService {
         }
     }
 
+    //id uniqueness check
+    boolean idExists(int id){
+        for(Student k:student){
+            if(id==k.getId()){
+                System.out.println("Id already exists");
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     
     //add functionality
     void Studentadd(Student s){
+
         student.add(s);
         saveStudents();
     }
@@ -91,7 +103,7 @@ public class StudentService {
                 student.remove(i);
 
                 saveStudents();
-                
+
                 System.out.println("Deleted");
                 return;
             }

@@ -21,6 +21,9 @@ public class Main {
                         System.out.println("Enter id:");
                         int id=sc.nextInt();
                         sc.nextLine();
+                        if(service.idExists(id)){
+                            break;
+                        }
                         System.out.println("Enter name:");
                         String name=sc.nextLine();
                         System.out.println("Enter Age:");
