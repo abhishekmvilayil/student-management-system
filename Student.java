@@ -12,9 +12,24 @@ public class Student {
         this.course=course;
     }
 
+
+
     public int getId(){
         return id;
     }
+        public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+    
+
     
     @Override
     public String toString(){
@@ -23,6 +38,8 @@ public class Student {
                 ",Age:"+age+
                 ",Course:"+course;
     }
+
+    
 
     public void setName(String name) {
         this.name = name;
@@ -35,4 +52,6 @@ public class Student {
     public void setCourse(String course) {
         this.course = course;
     }
+
+
 }

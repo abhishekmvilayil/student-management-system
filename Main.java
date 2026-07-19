@@ -3,6 +3,9 @@ public class Main {
     public static void main(String[] args) {
         StudentService service=new StudentService();
         
+        //load student data from file
+        service.loadStudent();
+
         Scanner sc=new Scanner(System.in);
         while (true) { 
                 System.out.println("1. Add Student");
